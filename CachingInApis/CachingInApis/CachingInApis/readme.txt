@@ -1,0 +1,3 @@
+﻿Scaffold-DbContext "Server=DESKTOP-HVOJ6Q8;Database=AdventureWorks2014;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Table HumanResources.Employee -force
+
+Scaffold-DbContext "Server=DESKTOP-HVOJ6Q8;Database=AdventureWorks2014;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Table HumanResources.Employee,HumanResources.Department -force
