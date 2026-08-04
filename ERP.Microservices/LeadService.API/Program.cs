@@ -1,17 +1,29 @@
+using LeadService.Application.Interfaces;
+using LeadService.Domain.Interfaces;
+using LeadService.Infrastructure.Data;
+using LeadService.Infrastructure.Repositories;
+using Dapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<DapperContext>();
+
+builder.Services.AddScoped<ILeadRepository, LeadRepository>();
+builder.Services.AddScoped<ILeadService, LeadService.Application.Services.LeadService>();
+Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
