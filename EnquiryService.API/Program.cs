@@ -15,10 +15,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<DapperContext>();
 
 builder.Services.AddScoped<IEnquiryRepository, EnquiryRepository>();
-
-//builder.Services.AddScoped<IEnquiryService, EnquiryService>();                                                                
-
 builder.Services.AddScoped<IEnquiryService, EnquiryService.Application.Services.EnquiryService>();
+
+builder.Services.AddScoped<IEnquiryFollowUpRepository, EnquiryFollowUpRepository>();
+builder.Services.AddScoped<IEnquiryFollowUpService, EnquiryFollowUpService>();
+
+builder.Services.AddScoped<IEnquiryForRepository, EnquiryForRepository>();
+builder.Services.AddScoped<IEnquiryForService, EnquiryForService>();
 Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
 
 var app = builder.Build();
