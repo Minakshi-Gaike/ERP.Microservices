@@ -7,6 +7,12 @@
     <Project Path="EnquiryService.Domain/EnquiryService.Domain.csproj" />
     <Project Path="EnquiryService.Infrastructure/EnquiryService.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/Services/LeadManagementService/">
+    <Project Path="LeadManagement.API/LeadManagement.API.csproj" Id="167cf0db-ad62-4593-ad29-dc5c584b53e0" />
+    <Project Path="LeadManagement.Application/LeadManagement.Application.csproj" Id="4b6d471d-c28a-4c3a-bf85-00ac5cd4f81f" />
+    <Project Path="LeadManagement.Domain/LeadManagement.Domain.csproj" Id="9f5b0748-3490-47db-84f2-882a318235e9" />
+    <Project Path="LeadManagement.Infrastructure/LeadManagement.Infrastructure.csproj" Id="4c00f434-e518-4866-9c1a-afcd519a0586" />
+  </Folder>
   <Folder Name="/Services/LeadService/">
     <Project Path="LeadService.API/LeadService.API.csproj" />
     <Project Path="LeadService.Application/LeadService.Application.csproj" />
